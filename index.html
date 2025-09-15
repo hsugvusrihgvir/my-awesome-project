@@ -1,50 +1,60 @@
- <!DOCTYPE html> 
-<html lang="ru"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Главная - Название вашего сайта</title> 
-    <meta name="description" content="Краткое описание главной страницы вашего сайта"> 
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
-</head> 
-<body> 
-    <!-- Шапка сайта --> 
-    <header> 
-        <a href="/">Логотип или название сайта</a> 
-        <!-- Главное меню навигации --> 
-        <nav> 
-            <ul> 
-                <li><a href="index.html">Главная</a></li> 
-                <li><a href="about.html">О нас</a></li> 
-                <li><a href="contacts.html">Контакты</a></li> 
-            </ul> 
-        </nav> 
-    </header> 
-    <!-- Уникальное основное содержимое страницы --> 
-    <main>
-        <h1>Добро пожаловать на наш сайт!</h1> 
-        <!-- Секция 1 с якорем --> 
-        <section id="services"> 
-            <h2>Наши услуги</h2> 
-            <p>Описание предоставляемых услуг...</p> 
-            <a href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы --> 
-        </section> 
-        <!-- Секция 2 с якорем --> 
-        <section id="portfolio"> 
-            <h2>Портфолио</h2> 
-            <p>Примеры наших работ...</p> 
-        </section> 
-        <!-- Секция 3 с якорем --> 
-        <section id="contacts"> 
-            <h2>Контактная информация</h2> 
-            <p>Наши контакты...</p> 
-    </main> 
-            <a href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу --> 
-        </section> 
-    <!-- Подвал сайта --> 
-    <footer> 
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p> 
-        <p>Телефон: +7 (123) 456-78-90</p> 
-    </footer> 
-</body> 
-</html> 
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Название вашего сайта</title>
+    <meta name="description" content="Краткое описание главной страницы вашего сайта">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <a class="site-header__brand" href="/">Лого</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active"
+                                              href="index.html">Главная</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta"
+                                              href="about.html">О нас</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta" href="contacts.html">Связаться</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Уникальное основное содержимое страницы -->
+    <main class="page-main">
+        <h1 class="page-main__title">Добро пожаловать на наш сайт</h1>
+        <section class="section section--services" id="services">
+            <h2 class="section__title">Наши услуги</h2>
+            <p class="section__text">Описание предоставляемых услуг...</p>
+            <a class="section__link" href="#contacts">Связаться с нами</a> <!-- Якорная ссылка внутри страницы -->
+        </section>
+        <!-- Секция 2 с якорем -->
+        <section class="section section--portfolio" id="portfolio">
+            <h2 class="section__title">Портфолио</h2>
+            <p class="section__text" >Примеры наших работ...</p>
+            <!-- Добавьте субтитры через <track> (WebVTT); poster — превью-кадр -->
+            <video class="media" controls preload="metadata" playsinline width="960" height="540" poster="video/poster.jpg">
+                <source src="video/v1.mp4" type="video/mp4"> <!-- основной формат -->
+                <source src="video/v1.webm" type="video/webm"> <!-- альтернатива -->
+                <track kind="captions" srclang="ru" src="video/captions-ru.vtt"
+                       label="Русские субтитры" default> Ваш браузер не поддерживает видео.
+            </video>
+        </section>
+        <!-- Секция 3 с якорем -->
+        <section class="section section--contacts" id="contacts">
+            <h2 class="section__title">Контактная информация</h2>
+            <p class="section__text">Наши контакты...</p>
+            <a  class="section__link" href="contacts.html">Подробнее</a> <!-- Ссылка на отдельную страницу -->
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="site-footer">
+        <p class="site-footer__text">&copy; 2023 Название вашего сайта. Все права защищены.</p>
+        <p class="site-footer__text">Телефон: +7 (123) 456-78-90</p>
+    </footer>
+</body>
+</html>

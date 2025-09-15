@@ -1,52 +1,74 @@
  <!DOCTYPE html> 
-<html lang="ru"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Контакты"> 
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
-    <title>Контакты - Название вашего сайта</title> 
-</head> 
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Контакты - Название вашего сайта</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
 <body> 
-    <!-- Шапка сайта --> 
-    <header> 
-        <a href="/">Логотип или название сайта</a> 
-        <!-- Главное меню навигации --> 
-        <nav> 
-            <ul> 
-                <li><a href="index.html">Главная</a></li> 
-                <li><a href="about.html">О нас</a></li> 
-                <li><a href="contacts.html">Контакты</a></li> 
-            </ul> 
-        </nav> 
-    </header> 
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <a class="site-header__brand" href="/">Лого</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <ul class="site-nav__list">
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta" href="index.html">Главная</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta" href="about.html">О нас</a></li>
+                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html">Связаться</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- Уникальное основное содержимое страницы --> 
-    <main>
-        <h1>Контакты</h1> 
+    <main class="page-main">
+        <h1 class="page-main__title">Контакты</h1>
   
-        <section id="people"> 
-            <h2>Человек 1</h2> 
-            <p>+7 999 999 99 99</p> 
-            <h2>Человек 2</h2> 
-            <p>+7 777 777 77 77</p> 
-            <h2>Человек 3</h2> 
-            <p>+7 888 88 88</p> 
+        <section class="page-main__selection" id="people">
+            <div class="page-main__selection__item">
+            <h2 class="page-main__title">Человек 1</h2>
+            <p class="page-main__text">+7 999 999 99 99</p>
+            <picture class="page-main__picture">
+                <img src="img/p1.jpg" alt="Работник 1"
+                     width="200" height="200">
+            </picture>
+            </div>
+
+            <div class="page-main__selection__item">
+            <h2 class="page-main__title">Человек 2</h2>
+            <p class="page-main__text">+7 777 777 77 77</p>
+            <picture class="page-main__picture">
+                <img src="img/p2.jpg" alt="Работник 2"
+                     width="200" height="200">
+            </picture>
+            </div>
+
+            <div class="page-main__selection__item">
+            <h2 class="page-main__title">Человек 3</h2>
+            <p class="page-main__text">+7 888 88 88</p>
+            <picture class="page-main__picture">
+                <img src="img/p3.jpg" alt="Работник 3"
+                     width="200" height="200">
+            </picture>
+            </div>
         </section> 
 
-        <section id="address"> 
-            <h2>Адрес</h2> 
-            <p>г. Москва, ул. Собакина, д. 1</p> 
+        <section class="page-main__selection" id="address">
+            <h2 class="page-main__title">Адрес</h2>
+            <p class="page-main__text">г. Москва, ул. Собакина, д. 1</p>
         </section> 
 
-        <section id="email"> 
-            <h2>Почта</h2> 
-            <p>aaa.gmail.com</p> 
+        <section class="page-main__selection" id="email">
+            <h2 class="page-main__title">Почта</h2>
+            <p class="page-main__text">aaa.gmail.com</p>
+        </section>
     </main> 
-        </section> 
-    <!-- Подвал сайта --> 
-    <footer> 
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p> 
-        <p>Телефон: +7 (123) 456-78-90</p> 
-    </footer> 
+
+    <!-- Подвал сайта -->
+    <footer class="site-footer">
+        <p class="site-footer__text">&copy; 2023 Название вашего сайта. Все права защищены.</p>
+        <p class="site-footer__text">Телефон: +7 (123) 456-78-90</p>
+    </footer>
 </body> 
 </html> 
