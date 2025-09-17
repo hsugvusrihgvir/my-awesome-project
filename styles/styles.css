@@ -58,7 +58,7 @@ html{ scroll-behavior:smooth; }
 .site-nav__link{
     text-decoration:none;
     color:var(--color-primary);
-    padding:.25rem .5rem;
+    padding:var(--space-1) var(--space-2);
     border-radius:var(--radius);
 }
 .site-nav__link:hover{ background:rgba(10,132,255,.12); }
@@ -118,14 +118,14 @@ html{ scroll-behavior:smooth; }
 .form__label{ display:block; margin:var(--space-2) 0 var(--space-1); }
 .form__input, .form__select, .form__textarea{
     width:100%;
-    padding:.5rem .75rem;
+    padding:var(--space-2) var(--space-3);
     border:1px solid #c8c8c8;
     border-radius:var(--radius);
     background:var(--color-bg); color:inherit;
 }
 .form__actions{ display:flex; gap:var(--space-2); margin-top:var(--space-3); }
 .form__button{
-    padding:.5rem 1rem;
+    padding:var(--space-2) var(--space-3);
     border:none; border-radius:var(--radius);
     background:var(--color-primary); color:var(--color-bg); cursor:pointer;
 }
@@ -159,3 +159,5 @@ html{ scroll-behavior:smooth; }
     border-radius: var(--radius);
     background: var(--color-card);
 }
+
+.media{ aspect-ratio:9/16; width:20%; height:auto; display:block; }
