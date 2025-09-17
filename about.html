@@ -19,6 +19,23 @@
             <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta" href="index.html">Главная</a></li>
             <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="about.html">О нас</a></li>
             <li class="site-nav__item"><a class="site-nav__link site-nav__link--cta" href="contacts.html">Связаться</a></li>
+            <button class="theme-toggle" type="button" aria-pressed="false">Тема</button>
+            <script defer>
+                const KEY='theme', btn=document.querySelector('.theme-toggle');
+                const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+                // Автовыбор: системная тема или сохранённый выбор пользователя
+                if(localStorage.getItem(KEY)==='dark' || (!localStorage.getItem(KEY) &&
+                    prefersDark)){
+                    document.body.classList.add('theme-dark');
+                    btn?.setAttribute('aria-pressed','true');
+                }
+                // Переключение по кнопке с сохранением в localStorage
+                btn?.addEventListener('click', ()=>{
+                    const isDark=document.body.classList.toggle('theme-dark');
+                    btn.setAttribute('aria-pressed', String(isDark));
+                    localStorage.setItem(KEY, isDark ? 'dark' : 'light');
+                });
+            </script>
         </ul>
     </nav>
 </header>

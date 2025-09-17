@@ -1,7 +1,7 @@
 ﻿:root{
     /* Палитра */
     --color-bg:#fff; --color-fg:#0b0b0b; --color-muted:#666; --color-card: #d0e6e0;
-    --color-primary:#0a84ff; --color-danger:#b00020;
+    --color-primary: #e82386; --color-danger:#b00020;
     /* Типографика и размеры */
     --font-body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
     --space-1:4px; --space-2:8px; --space-3:16px; --space-4:24px; --space-5:40px;
@@ -12,7 +12,8 @@
 /* Тёмная тема: переопределяем только значения токенов */
 body.theme-dark{
     --color-bg:#0b0b0b; --color-fg:#f5f5f5; --color-muted:#aaa;
-    --color-primary:#6aa2ff;
+    --color-primary: #9f5669;
+    --color-card: #98185c;
 }
 
 
@@ -161,3 +162,9 @@ html{ scroll-behavior:smooth; }
 }
 
 .media{ aspect-ratio:9/16; width:20%; height:auto; display:block; }
+
+.theme-toggle{
+    padding:var(--space-1) var(--space-2);
+    border-radius:var(--radius);
+    background: var(--color-primary);
+}
